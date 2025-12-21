@@ -30,7 +30,7 @@ void setup()
   pinMode(yellowLED, OUTPUT);
   //define green LED, , digital11
   pinMode(greenLED, OUTPUT);
-  //define trap enter,analog0
+  //define trap input pin,analog0
   pinMode(trapPin, INPUT);
    //turn on serial output
   Serial.begin(9600);
@@ -39,39 +39,45 @@ void setup()
 void loop()
 {
   //do a little light show
-  while(!firstRun)
+  while (!firstRun)
   {
     	firstRun=initLED();
   }
   
-  while(!raceStarted)
+  while (!raceStarted)
   {
     serialInteraction();
   }
+
   while (raceStarted)
   {
     if (digitalRead(trapPin) == HIGH)
     {
+      digitalWrite(trapPin, LOW); //imediately reset the pin
+      Serial.println("Trap Triggered!");
+      Serial.println("lapCount: " + String(currentLap) + " / " + String(lapCount));
+      //trap triggered but its the first lap, so log as reaction time
       if (currentLap == 0)
       {
         reactionTime = millis() - startTime;
         Serial.println("Reaction Time: " + String(reactionTime) + " ms");
-        lapCount++;
+        currentLap++;
       }
-
-      if (currentLap > 0)
+      //trap triggered and its not the first lap, so log lap time
+      else if (currentLap > 0)
       {
         lapTime = millis() - startTime - lastLapTime;
         lastLapTime += lapTime;
         Serial.println("Lap " + String(currentLap) + " Time: " + String(lapTime) + " ms");
-        lapCount++;
+        currentLap++;
       }
 
-      if (currentLap >= lapCount)
+      if (currentLap > lapCount)
       {
         raceStarted=false;
         Serial.println("Race Finished!");
       }
+      delay(2000); //debounce delay
     }
   }
 }
@@ -124,30 +130,54 @@ void startRace()
 
 void serialInteraction()
 {
-  Serial.println("Do You want to start a race? (Y/N)");
-  if (Serial.available() > 0)
-  {
+  // Wait for user to start race
+  input = "";
+  while (true) {
+    Serial.println("Do You want to start a race? (Y/N)");
+    while (Serial.available() == 0) {
+      // Wait for input
+      delay(10);
+    }
     input = Serial.readStringUntil('\n');
-    input = input.trim();
+    if (input == "Y" || input == "y") {
+      break;
+    } else if (input == "N" || input == "n") {
+      Serial.println("Race not started. Send Y to start.");
+    } else {
+      Serial.println("Invalid input. Please enter Y or N.");
+    }
   }
 
-  if (input == "Y" || input == "y") 
-  {
+  // Ask for number of laps
+  lapCount = -1;
+  while (lapCount < 1 || lapCount > 500) {
     Serial.println("How Many Laps? (1-500)");
-    if (Serial.available() > 0)
-    {
-      lapCount = Serial.readStringUntil('\n').toInt();
+    while (Serial.available() == 0) {
+      delay(10);
     }
-    Serial.println("You have selected " + String(lapCount) + " laps.");
+    String lapInput = Serial.readStringUntil('\n');
+    lapCount = lapInput.toInt();
+    if (lapCount < 1 || lapCount > 500) {
+      Serial.println("Invalid lap count. Please enter a number between 1 and 500.");
+    }
+  }
+  Serial.println("You have selected " + String(lapCount) + " laps.");
+
+  // Confirm ready to start
+  while (true) {
     Serial.println("Ready to Start? (Y/N)");
-    if (Serial.available() > 0)
-    {
-      input = Serial.readStringUntil('\n');
-      
-    } 
-    if (input == "Y" || input == "y") 
-      {
-        startRace();
-      }
+    while (Serial.available() == 0) {
+      delay(10);
+    }
+    input = Serial.readStringUntil('\n');
+    if (input == "Y" || input == "y") {
+      startRace();
+      break;
+    } else if (input == "N" || input == "n") {
+      Serial.println("Race cancelled. Send Y to start again.");
+      break;
+    } else {
+      Serial.println("Invalid input. Please enter Y or N.");
+    }
   }
 }
