@@ -12,8 +12,10 @@ int trapPin = A0;
 
 //race variables
 int lapCount = -1;
+int currentLap = -1;
 int reactionTime = -1;
-int laptTime = -1;
+int lastLapTime = 0;
+int lapTime = -1;
 int startTime = -1;
 
 //interactive variables
@@ -36,13 +38,42 @@ void setup()
 
 void loop()
 {
-
   //do a little light show
   while(!firstRun)
   {
     	firstRun=initLED();
   }
   
+  while(!raceStarted)
+  {
+    serialInteraction();
+  }
+  while (raceStarted)
+  {
+    if (digitalRead(trapPin) == HIGH)
+    {
+      if (currentLap == 0)
+      {
+        reactionTime = millis() - startTime;
+        Serial.println("Reaction Time: " + String(reactionTime) + " ms");
+        lapCount++;
+      }
+
+      if (currentLap > 0)
+      {
+        lapTime = millis() - startTime - lastLapTime;
+        lastLapTime += lapTime;
+        Serial.println("Lap " + String(currentLap) + " Time: " + String(lapTime) + " ms");
+        lapCount++;
+      }
+
+      if (currentLap >= lapCount)
+      {
+        raceStarted=false;
+        Serial.println("Race Finished!");
+      }
+    }
+  }
 }
 
 bool initLED()
@@ -88,20 +119,35 @@ void startRace()
     Serial.println("Race Started!");
     startTime = millis();
     raceStarted=true;
+    currentLap=0;
 }
 
 void serialInteraction()
 {
   Serial.println("Do You want to start a race? (Y/N)");
-  input = Serial.readStringUntil('\n');
+  if (Serial.available() > 0)
+  {
+    input = Serial.readStringUntil('\n');
+    input = input.trim();
+  }
+
   if (input == "Y" || input == "y") 
   {
     Serial.println("How Many Laps? (1-500)");
-    Serial.println("Ready to Start? (Y/N)");
-    input = Serial.readStringUntil('\n');
-    if (input == "Y" || input == "y") 
+    if (Serial.available() > 0)
     {
-        startRace();
+      lapCount = Serial.readStringUntil('\n').toInt();
     }
+    Serial.println("You have selected " + String(lapCount) + " laps.");
+    Serial.println("Ready to Start? (Y/N)");
+    if (Serial.available() > 0)
+    {
+      input = Serial.readStringUntil('\n');
+      
+    } 
+    if (input == "Y" || input == "y") 
+      {
+        startRace();
+      }
   }
 }
