@@ -16,6 +16,7 @@ int currentLap = -1;
 int reactionTime = -1;
 int lastLapTime = 0;
 int lapTime = -1;
+int totalRaceTime = -1;
 int startTime = -1;
 
 //interactive variables
@@ -59,15 +60,19 @@ void loop()
       //trap triggered but its the first lap, so log as reaction time
       if (currentLap == 0)
       {
+        //this is the delta between green light and trap trigger
         reactionTime = millis() - startTime;
         Serial.println("Reaction Time: " + String(reactionTime) + " ms");
         currentLap++;
+        //add it to the total race
+        totalRaceTime += reactionTime;
       }
       //trap triggered and its not the first lap, so log lap time
       else if (currentLap > 0)
       {
-        lapTime = millis() - startTime - lastLapTime;
-        lastLapTime += lapTime;
+        //this is the delta between the last trap trigger and now
+        lapTime = millis() - startTime - totalRaceTime;
+        totalRaceTime += lapTime;
         Serial.println("Lap " + String(currentLap) + " Time: " + String(lapTime) + " ms");
         currentLap++;
       }
@@ -75,7 +80,11 @@ void loop()
       if (currentLap > lapCount)
       {
         raceStarted=false;
-        Serial.println("Race Finished!");
+        lapTime = millis() - startTime - totalRaceTime;
+        totalRaceTime += lapTime;
+        Serial.println("Lap " + String(currentLap) + " Time: " + String(lapTime) + " ms");
+
+        Serial.println("Race Finished!" + " Total Race Time: " + String(totalRaceTime) + " ms");
       }
       delay(2000); //debounce delay
     }
@@ -126,6 +135,7 @@ void startRace()
     startTime = millis();
     raceStarted=true;
     currentLap=0;
+    totalRaceTime=0;
 }
 
 void serialInteraction()
