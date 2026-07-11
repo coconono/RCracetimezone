@@ -553,6 +553,14 @@ def autonomous_controls(
             throttle = 1.0
     overspeed = forward_speed - target_speed
 
+    straight_cruise = (
+        severity < 0.1
+        and severity_ahead < 0.12
+        and abs(heading_error) < 0.28
+        and nearest_ahead > 115.0
+        and not off_center
+    )
+
     safety_turn_guard = 1.0 + behavior.barrier_avoidance_priority * 0.25 + (learning.safety_bias - 1.0) * 0.3
     if not coast_phase:
         if overspeed > 12.0:
@@ -569,6 +577,10 @@ def autonomous_controls(
             brake = max(brake, 0.6)
         if in_turn and traffic_pressure > 0.35 and forward_speed > 22.0:
             brake = max(brake, 0.5)
+    if straight_cruise and not emergency_brake:
+        brake = 0.0
+        if speed_error <= 2.0:
+            throttle = 0.0
     if emergency_brake:
         brake = 1.0
 

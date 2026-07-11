@@ -6,6 +6,7 @@ from typing import Any
 
 CAR_STATES = (
     "stopped",
+    "coasting",
     "braking",
     "moving_forward",
     "turning_left",

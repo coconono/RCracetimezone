@@ -118,6 +118,8 @@ def update_car_state(
 
     if abs(state.speed) < 2 and throttle <= 0.01 and brake <= 0.01:
         state.state = "stopped"
+    elif throttle <= 0.05 and brake <= 0.05 and abs(steering) <= 0.2 and state.speed > 2.0:
+        state.state = "coasting"
     elif brake > 0.1:
         state.state = "braking"
     elif steering < -0.2:
