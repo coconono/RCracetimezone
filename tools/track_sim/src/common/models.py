@@ -16,6 +16,107 @@ CAR_STATES = (
     "crashed",
 )
 
+VISION_X_BINS = ("left", "center", "right")
+VISION_Y_BINS = ("near", "middle", "far")
+VISION_CELL_STATES = ("clear", "waypoint", "wreck", "car", "barrier")
+WAYPOINT_KINDS = ("permanent",)
+WAYPOINT_SOURCES = ("generated",)
+
+
+@dataclass
+class VisionCell:
+    state: str = "clear"
+    distance: float = 0.0
+
+
+@dataclass
+class VisionMatrix:
+    cells: dict[str, VisionCell] = field(default_factory=dict)
+
+    @staticmethod
+    def _key(x_bin: str, y_bin: str) -> str:
+        return f"{x_bin}:{y_bin}"
+
+    @classmethod
+    def empty(cls) -> "VisionMatrix":
+        cells = {
+            cls._key(x_bin, y_bin): VisionCell()
+            for y_bin in VISION_Y_BINS
+            for x_bin in VISION_X_BINS
+        }
+        return cls(cells=cells)
+
+    def get(self, x_bin: str, y_bin: str) -> VisionCell:
+        return self.cells.get(self._key(x_bin, y_bin), VisionCell())
+
+    def set(self, x_bin: str, y_bin: str, state: str, distance: float) -> None:
+        self.cells[self._key(x_bin, y_bin)] = VisionCell(state=state, distance=distance)
+
+
+@dataclass
+class Waypoint:
+    x: float
+    y: float
+    kind: str = "permanent"
+    source: str = "generated"
+    created_lap: int = 0
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "x": self.x,
+            "y": self.y,
+            "kind": self.kind,
+            "source": self.source,
+            "created_lap": self.created_lap,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> "Waypoint":
+        raw_kind = str(data.get("kind", "permanent"))
+        raw_source = str(data.get("source", "generated"))
+        kind = raw_kind if raw_kind in WAYPOINT_KINDS else "permanent"
+        source = raw_source if raw_source in WAYPOINT_SOURCES else "generated"
+        return cls(
+            x=float(data.get("x", 0.0)),
+            y=float(data.get("y", 0.0)),
+            kind=kind,
+            source=source,
+            created_lap=int(data.get("created_lap", 0)),
+        )
+
+
+@dataclass
+class CarRoutePlan:
+    permanent_waypoints: list[Waypoint] = field(default_factory=list)
+    active_target_index: int = 0
+    last_known_bearing: float = 0.0
+
+    def active_waypoint(self) -> Waypoint | None:
+        if not self.permanent_waypoints:
+            return None
+        return self.permanent_waypoints[self.active_target_index % len(self.permanent_waypoints)]
+
+    def next_permanent_waypoint(self) -> Waypoint | None:
+        if not self.permanent_waypoints:
+            return None
+        idx = (self.active_target_index + 1) % len(self.permanent_waypoints)
+        return self.permanent_waypoints[idx]
+
+    def advance_if_reached(self, x: float, y: float, threshold: float, allow_wrap: bool = True) -> bool:
+        target = self.active_waypoint()
+        if target is None:
+            return False
+        if (target.x - x) ** 2 + (target.y - y) ** 2 > threshold * threshold:
+            return False
+        if self.permanent_waypoints:
+            if len(self.permanent_waypoints) == 1:
+                return True
+            at_last = self.active_target_index >= len(self.permanent_waypoints) - 1
+            if at_last and not allow_wrap:
+                return False
+            self.active_target_index = (self.active_target_index + 1) % len(self.permanent_waypoints)
+        return True
+
 
 @dataclass
 class BarrierPiece:
@@ -163,6 +264,8 @@ class CarRuntimeState:
     wall_contact_frames: int = 0
     distance_traveled: float = 0.0
     last_lap_distance: float = 0.0
+    last_x: float = 0.0
+    last_y: float = 0.0
 
     def as_status_lines(self) -> list[str]:
         return [

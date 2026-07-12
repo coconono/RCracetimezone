@@ -1,12 +1,12 @@
 {
-  "name": "tracko",
+  "name": "cocorp",
   "outer_pieces": [
     {
       "piece_id": "outer_0",
       "piece_type": "curve",
       "position": [
-        203.0,
-        169.0
+        205.0,
+        144.0
       ],
       "orientation": 0,
       "connects_to": [
@@ -16,10 +16,10 @@
     },
     {
       "piece_id": "outer_1",
-      "piece_type": "long_straight",
+      "piece_type": "short_straight",
       "position": [
-        757.0,
-        169.0
+        758.0,
+        144.0
       ],
       "orientation": 0,
       "connects_to": [
@@ -31,8 +31,8 @@
       "piece_id": "outer_2",
       "piece_type": "curve",
       "position": [
-        1397.0,
-        169.0
+        1395.0,
+        144.0
       ],
       "orientation": 90,
       "connects_to": [
@@ -42,10 +42,10 @@
     },
     {
       "piece_id": "outer_3",
-      "piece_type": "short_straight",
+      "piece_type": "long_straight",
       "position": [
-        1397.0,
-        475.0
+        1395.0,
+        496.0
       ],
       "orientation": 90,
       "connects_to": [
@@ -57,8 +57,8 @@
       "piece_id": "outer_4",
       "piece_type": "curve",
       "position": [
-        1397.0,
-        731.0
+        1395.0,
+        756.0
       ],
       "orientation": 180,
       "connects_to": [
@@ -70,8 +70,8 @@
       "piece_id": "outer_5",
       "piece_type": "long_straight",
       "position": [
-        823.0,
-        731.0
+        733.0,
+        756.0
       ],
       "orientation": 180,
       "connects_to": [
@@ -83,8 +83,8 @@
       "piece_id": "outer_6",
       "piece_type": "curve",
       "position": [
-        203.0,
-        731.0
+        205.0,
+        756.0
       ],
       "orientation": 270,
       "connects_to": [
@@ -96,8 +96,8 @@
       "piece_id": "outer_7",
       "piece_type": "long_straight",
       "position": [
-        203.0,
-        505.0
+        205.0,
+        470.0
       ],
       "orientation": 270,
       "connects_to": [
@@ -111,8 +111,8 @@
       "piece_id": "inner_0",
       "piece_type": "curve",
       "position": [
-        273.0,
-        239.0
+        315.0,
+        254.0
       ],
       "orientation": 0,
       "connects_to": [
@@ -122,10 +122,10 @@
     },
     {
       "piece_id": "inner_1",
-      "piece_type": "long_barrier",
+      "piece_type": "short_barrier",
       "position": [
-        757.0,
-        239.0
+        758.0,
+        254.0
       ],
       "orientation": 0,
       "connects_to": [
@@ -137,8 +137,8 @@
       "piece_id": "inner_2",
       "piece_type": "curve",
       "position": [
-        1327.0,
-        239.0
+        1285.0,
+        254.0
       ],
       "orientation": 90,
       "connects_to": [
@@ -148,10 +148,10 @@
     },
     {
       "piece_id": "inner_3",
-      "piece_type": "short_barrier",
+      "piece_type": "long_barrier",
       "position": [
-        1327.0,
-        475.0
+        1285.0,
+        496.0
       ],
       "orientation": 90,
       "connects_to": [
@@ -163,8 +163,8 @@
       "piece_id": "inner_4",
       "piece_type": "curve",
       "position": [
-        1327.0,
-        661.0
+        1285.0,
+        646.0
       ],
       "orientation": 180,
       "connects_to": [
@@ -176,8 +176,8 @@
       "piece_id": "inner_5",
       "piece_type": "long_barrier",
       "position": [
-        823.0,
-        661.0
+        733.0,
+        646.0
       ],
       "orientation": 180,
       "connects_to": [
@@ -189,8 +189,8 @@
       "piece_id": "inner_6",
       "piece_type": "curve",
       "position": [
-        273.0,
-        661.0
+        315.0,
+        646.0
       ],
       "orientation": 270,
       "connects_to": [
@@ -202,8 +202,8 @@
       "piece_id": "inner_7",
       "piece_type": "long_barrier",
       "position": [
-        273.0,
-        505.0
+        315.0,
+        470.0
       ],
       "orientation": 270,
       "connects_to": [
@@ -214,901 +214,527 @@
   ],
   "outer_points": [
     [
-      203.0,
-      169.0
+      205.0,
+      144.0
     ],
     [
-      757.0,
-      169.0
+      758.0,
+      144.0
     ],
     [
-      1397.0,
-      169.0
+      1395.0,
+      144.0
     ],
     [
-      1397.0,
-      475.0
+      1395.0,
+      496.0
     ],
     [
-      1397.0,
-      731.0
+      1395.0,
+      756.0
     ],
     [
-      823.0,
-      731.0
+      733.0,
+      756.0
     ],
     [
-      203.0,
-      731.0
+      205.0,
+      756.0
     ],
     [
-      203.0,
-      505.0
+      205.0,
+      470.0
     ]
   ],
   "inner_points": [
     [
-      273.0,
-      239.0
+      315.0,
+      254.0
     ],
     [
-      757.0,
-      239.0
+      758.0,
+      254.0
     ],
     [
-      1327.0,
-      239.0
+      1285.0,
+      254.0
     ],
     [
-      1327.0,
-      475.0
+      1285.0,
+      496.0
     ],
     [
-      1327.0,
-      661.0
+      1285.0,
+      646.0
     ],
     [
-      823.0,
-      661.0
+      733.0,
+      646.0
     ],
     [
-      273.0,
-      661.0
+      315.0,
+      646.0
     ],
     [
-      273.0,
-      505.0
+      315.0,
+      470.0
     ]
   ],
   "start_grid": [
-    1327.0,
-    466.6,
-    70.0,
-    16.8
+    1059.0,
+    648.0,
+    26.4,
+    110.0
   ],
   "metadata": {
-    "seed": 321248,
-    "created_unix": 1783737668,
-    "lane_width": 70.0,
+    "seed": 234174,
+    "created_unix": 1783828141,
+    "lane_width": 110.0,
     "curve_count": 4,
-    "start_grid_index": 3,
+    "start_grid_index": 1,
     "car_starts": [
-      {
-        "instance_name": "car_2",
-        "car_file": "car.car",
-        "start_pose": [
-          1344.0,
-          495.0,
-          -1.5707963267948966
-        ]
-      },
-      {
-        "instance_name": "car2_2",
-        "car_file": "car2.car",
-        "start_pose": [
-          1346.272077938642,
-          571.2720779386422,
-          -1.5707963267948966
-        ]
-      },
       {
         "instance_name": "car",
         "car_file": "car.car",
         "start_pose": [
-          1381.0,
-          497.0,
-          -1.5707963267948966
+          1030.2,
+          671.0,
+          0.0
         ]
       },
       {
-        "instance_name": "car2",
-        "car_file": "car2.car",
+        "instance_name": "car_2",
+        "car_file": "car.car",
         "start_pose": [
-          1345.0,
-          612.0,
-          -1.5707963267948966
+          1033.2,
+          729.0,
+          0.0
         ]
       },
       {
         "instance_name": "car_3",
         "car_file": "car.car",
         "start_pose": [
-          1346.0,
-          531.0,
-          -1.5707963267948966
-        ]
-      },
-      {
-        "instance_name": "car2_3",
-        "car_file": "car2.car",
-        "start_pose": [
-          1381.0,
-          570.0,
-          -1.5707963267948966
+          987.2,
+          672.0,
+          0.0
         ]
       },
       {
         "instance_name": "car_4",
         "car_file": "car.car",
         "start_pose": [
-          1379.0,
-          529.0,
-          -1.5707963267948966
+          984.2,
+          727.0,
+          0.0
         ]
       },
       {
-        "instance_name": "car2_4",
-        "car_file": "car2.car",
+        "instance_name": "car_5",
+        "car_file": "car.car",
         "start_pose": [
-          1381.0,
-          614.0,
-          -1.5707963267948966
+          943.2,
+          671.0,
+          0.0
+        ]
+      },
+      {
+        "instance_name": "car_6",
+        "car_file": "car.car",
+        "start_pose": [
+          943.2,
+          727.0,
+          0.0
+        ]
+      },
+      {
+        "instance_name": "car_7",
+        "car_file": "car.car",
+        "start_pose": [
+          903.2,
+          672.0,
+          0.0
+        ]
+      },
+      {
+        "instance_name": "car_8",
+        "car_file": "car.car",
+        "start_pose": [
+          901.2,
+          723.0,
+          0.0
         ]
       }
     ],
     "car_routes": {
-      "car_2": {
-        "active_target_index": 14,
-        "waypoints": [
-          {
-            "x": 238.0,
-            "y": 421.8277501244022,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 238.0,
-            "y": 537.3199675359151,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 247.27855258603233,
-            "y": 656.0835427662009,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 358.57707761551177,
-            "y": 692.8209858655971,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 475.8127703547919,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 591.4010436406606,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 706.8932610521745,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 822.3854784636882,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 937.8776958752021,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1053.369913286716,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1169.7387301268345,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1286.8634136209039,
-            "y": 686.4899810243045,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1362.0,
-            "y": 605.0240980903596,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1362.0,
-            "y": 489.45427159965476,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1362.0,
-            "y": 373.962054188141,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1349.15463514828,
-            "y": 255.29817565046497,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1240.5018982934182,
-            "y": 208.90161754186633,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1122.8247414385005,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1006.9854994792646,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 891.4932820677509,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 776.0010646562372,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 660.5088472447235,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 545.0166298332099,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 428.54945331726975,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 310.9728861916147,
-            "y": 216.7514100367416,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 238.0,
-            "y": 303.33,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          }
-        ]
-      },
-      "car2_2": {
-        "active_target_index": 14,
-        "waypoints": [
-          {
-            "x": 238.0,
-            "y": 421.8277501244022,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 238.0,
-            "y": 537.3199675359151,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 247.27855258603233,
-            "y": 656.0835427662009,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 358.57707761551177,
-            "y": 692.8209858655971,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 475.8127703547919,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 591.4010436406606,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 706.8932610521745,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 822.3854784636882,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 937.8776958752021,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1053.369913286716,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1169.7387301268345,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1286.8634136209039,
-            "y": 686.4899810243045,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1362.0,
-            "y": 605.0240980903596,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1362.0,
-            "y": 489.45427159965476,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1362.0,
-            "y": 373.962054188141,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1349.15463514828,
-            "y": 255.29817565046497,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1240.5018982934182,
-            "y": 208.90161754186633,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1122.8247414385005,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1006.9854994792646,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 891.4932820677509,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 776.0010646562372,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 660.5088472447235,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 545.0166298332099,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 428.54945331726975,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 310.9728861916147,
-            "y": 216.7514100367416,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 238.0,
-            "y": 303.33,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          }
-        ]
-      },
       "car": {
-        "active_target_index": 14,
+        "active_target_index": 10,
         "waypoints": [
           {
-            "x": 238.0,
-            "y": 421.8277501244022,
+            "x": 260.0,
+            "y": 404.2266076597191,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 238.0,
-            "y": 537.3199675359151,
+            "x": 260.0,
+            "y": 517.0836443960251,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 247.27855258603233,
-            "y": 656.0835427662009,
+            "x": 261.29561117139764,
+            "y": 632.995624413757,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 358.57707761551177,
-            "y": 692.8209858655971,
+            "x": 351.74491700870396,
+            "y": 696.3897246755779,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 475.8127703547919,
-            "y": 696.0,
+            "x": 466.76138707976287,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 591.4010436406606,
-            "y": 696.0,
+            "x": 579.618423816069,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 706.8932610521745,
-            "y": 696.0,
+            "x": 692.4754605523751,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 822.3854784636882,
-            "y": 696.0,
+            "x": 805.3324972886812,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 937.8776958752021,
-            "y": 696.0,
+            "x": 918.189534024988,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1053.369913286716,
-            "y": 696.0,
+            "x": 1031.046570761294,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1169.7387301268345,
-            "y": 696.0,
+            "x": 1145.2528439143366,
+            "y": 700.8554830816831,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1286.8634136209039,
-            "y": 686.4899810243045,
+            "x": 1259.1942325358475,
+            "y": 691.4636314833633,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 605.0240980903596,
+            "x": 1340.0,
+            "y": 618.4740355929961,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 489.45427159965476,
+            "x": 1340.0,
+            "y": 505.1434230425073,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 373.962054188141,
+            "x": 1340.0,
+            "y": 392.286386306201,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1349.15463514828,
-            "y": 255.29817565046497,
+            "x": 1336.800318974406,
+            "y": 275.78325010340376,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1240.5018982934182,
-            "y": 208.90161754186633,
+            "x": 1245.4083215002088,
+            "y": 207.96420013076607,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1122.8247414385005,
-            "y": 204.0,
+            "x": 1130.0402902836706,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1006.9854994792646,
-            "y": 204.0,
+            "x": 1016.0671566592928,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 891.4932820677509,
-            "y": 204.0,
+            "x": 903.2101199229866,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 776.0010646562372,
-            "y": 204.0,
+            "x": 790.3530831866804,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 660.5088472447235,
-            "y": 204.0,
+            "x": 677.4960464503741,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 545.0166298332099,
-            "y": 204.0,
+            "x": 564.6390097140679,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 428.54945331726975,
-            "y": 204.0,
+            "x": 451.20943891965686,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 310.9728861916147,
-            "y": 216.7514100367416,
+            "x": 335.76375718367433,
+            "y": 208.74411879622775,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 238.0,
-            "y": 303.33,
+            "x": 260.0,
+            "y": 288.42999999999995,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           }
         ]
       },
-      "car2": {
-        "active_target_index": 14,
+      "car_2": {
+        "active_target_index": 10,
         "waypoints": [
           {
-            "x": 238.0,
-            "y": 421.8277501244022,
+            "x": 260.0,
+            "y": 404.2266076597191,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 238.0,
-            "y": 537.3199675359151,
+            "x": 260.0,
+            "y": 517.0836443960251,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 247.27855258603233,
-            "y": 656.0835427662009,
+            "x": 261.29561117139764,
+            "y": 632.995624413757,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 358.57707761551177,
-            "y": 692.8209858655971,
+            "x": 351.74491700870396,
+            "y": 696.3897246755779,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 475.8127703547919,
-            "y": 696.0,
+            "x": 466.76138707976287,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 591.4010436406606,
-            "y": 696.0,
+            "x": 579.618423816069,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 706.8932610521745,
-            "y": 696.0,
+            "x": 692.4754605523751,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 822.3854784636882,
-            "y": 696.0,
+            "x": 805.3324972886812,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 937.8776958752021,
-            "y": 696.0,
+            "x": 918.189534024988,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1053.369913286716,
-            "y": 696.0,
+            "x": 1031.046570761294,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1169.7387301268345,
-            "y": 696.0,
+            "x": 1145.2528439143366,
+            "y": 700.8554830816831,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1286.8634136209039,
-            "y": 686.4899810243045,
+            "x": 1259.1942325358475,
+            "y": 691.4636314833633,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 605.0240980903596,
+            "x": 1340.0,
+            "y": 618.4740355929961,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 489.45427159965476,
+            "x": 1340.0,
+            "y": 505.1434230425073,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 373.962054188141,
+            "x": 1340.0,
+            "y": 392.286386306201,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1349.15463514828,
-            "y": 255.29817565046497,
+            "x": 1336.800318974406,
+            "y": 275.78325010340376,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1240.5018982934182,
-            "y": 208.90161754186633,
+            "x": 1245.4083215002088,
+            "y": 207.96420013076607,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1122.8247414385005,
-            "y": 204.0,
+            "x": 1130.0402902836706,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1006.9854994792646,
-            "y": 204.0,
+            "x": 1016.0671566592928,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 891.4932820677509,
-            "y": 204.0,
+            "x": 903.2101199229866,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 776.0010646562372,
-            "y": 204.0,
+            "x": 790.3530831866804,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 660.5088472447235,
-            "y": 204.0,
+            "x": 677.4960464503741,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 545.0166298332099,
-            "y": 204.0,
+            "x": 564.6390097140679,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 428.54945331726975,
-            "y": 204.0,
+            "x": 451.20943891965686,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 310.9728861916147,
-            "y": 216.7514100367416,
+            "x": 335.76375718367433,
+            "y": 208.74411879622775,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 238.0,
-            "y": 303.33,
+            "x": 260.0,
+            "y": 288.42999999999995,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
@@ -1116,373 +742,186 @@
         ]
       },
       "car_3": {
-        "active_target_index": 13,
+        "active_target_index": 11,
         "waypoints": [
           {
-            "x": 238.0,
-            "y": 421.8277501244022,
+            "x": 260.0,
+            "y": 404.2266076597191,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 238.0,
-            "y": 537.3199675359151,
+            "x": 260.0,
+            "y": 517.0836443960251,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 247.27855258603233,
-            "y": 656.0835427662009,
+            "x": 261.29561117139764,
+            "y": 632.995624413757,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 358.57707761551177,
-            "y": 692.8209858655971,
+            "x": 351.74491700870396,
+            "y": 696.3897246755779,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 475.8127703547919,
-            "y": 696.0,
+            "x": 466.76138707976287,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 591.4010436406606,
-            "y": 696.0,
+            "x": 579.618423816069,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 706.8932610521745,
-            "y": 696.0,
+            "x": 692.4754605523751,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 822.3854784636882,
-            "y": 696.0,
+            "x": 805.3324972886812,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 937.8776958752021,
-            "y": 696.0,
+            "x": 918.189534024988,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1053.369913286716,
-            "y": 696.0,
+            "x": 1031.046570761294,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1169.7387301268345,
-            "y": 696.0,
+            "x": 1145.2528439143366,
+            "y": 700.8554830816831,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1286.8634136209039,
-            "y": 686.4899810243045,
+            "x": 1259.1942325358475,
+            "y": 691.4636314833633,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 605.0240980903596,
+            "x": 1340.0,
+            "y": 618.4740355929961,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 489.45427159965476,
+            "x": 1340.0,
+            "y": 505.1434230425073,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 373.962054188141,
+            "x": 1340.0,
+            "y": 392.286386306201,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1349.15463514828,
-            "y": 255.29817565046497,
+            "x": 1336.800318974406,
+            "y": 275.78325010340376,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1240.5018982934182,
-            "y": 208.90161754186633,
+            "x": 1245.4083215002088,
+            "y": 207.96420013076607,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1122.8247414385005,
-            "y": 204.0,
+            "x": 1130.0402902836706,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1006.9854994792646,
-            "y": 204.0,
+            "x": 1016.0671566592928,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 891.4932820677509,
-            "y": 204.0,
+            "x": 903.2101199229866,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 776.0010646562372,
-            "y": 204.0,
+            "x": 790.3530831866804,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 660.5088472447235,
-            "y": 204.0,
+            "x": 677.4960464503741,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 545.0166298332099,
-            "y": 204.0,
+            "x": 564.6390097140679,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 428.54945331726975,
-            "y": 204.0,
+            "x": 451.20943891965686,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 310.9728861916147,
-            "y": 216.7514100367416,
+            "x": 335.76375718367433,
+            "y": 208.74411879622775,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 238.0,
-            "y": 303.33,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          }
-        ]
-      },
-      "car2_3": {
-        "active_target_index": 13,
-        "waypoints": [
-          {
-            "x": 238.0,
-            "y": 421.8277501244022,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 238.0,
-            "y": 537.3199675359151,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 247.27855258603233,
-            "y": 656.0835427662009,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 358.57707761551177,
-            "y": 692.8209858655971,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 475.8127703547919,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 591.4010436406606,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 706.8932610521745,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 822.3854784636882,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 937.8776958752021,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1053.369913286716,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1169.7387301268345,
-            "y": 696.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1286.8634136209039,
-            "y": 686.4899810243045,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1362.0,
-            "y": 605.0240980903596,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1362.0,
-            "y": 489.45427159965476,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1362.0,
-            "y": 373.962054188141,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1349.15463514828,
-            "y": 255.29817565046497,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1240.5018982934182,
-            "y": 208.90161754186633,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1122.8247414385005,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 1006.9854994792646,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 891.4932820677509,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 776.0010646562372,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 660.5088472447235,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 545.0166298332099,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 428.54945331726975,
-            "y": 204.0,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 310.9728861916147,
-            "y": 216.7514100367416,
-            "kind": "permanent",
-            "source": "generated",
-            "created_lap": 0
-          },
-          {
-            "x": 238.0,
-            "y": 303.33,
+            "x": 260.0,
+            "y": 288.42999999999995,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
@@ -1490,373 +929,934 @@
         ]
       },
       "car_4": {
-        "active_target_index": 14,
+        "active_target_index": 10,
         "waypoints": [
           {
-            "x": 238.0,
-            "y": 421.8277501244022,
+            "x": 260.0,
+            "y": 404.2266076597191,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 238.0,
-            "y": 537.3199675359151,
+            "x": 260.0,
+            "y": 517.0836443960251,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 247.27855258603233,
-            "y": 656.0835427662009,
+            "x": 261.29561117139764,
+            "y": 632.995624413757,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 358.57707761551177,
-            "y": 692.8209858655971,
+            "x": 351.74491700870396,
+            "y": 696.3897246755779,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 475.8127703547919,
-            "y": 696.0,
+            "x": 466.76138707976287,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 591.4010436406606,
-            "y": 696.0,
+            "x": 579.618423816069,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 706.8932610521745,
-            "y": 696.0,
+            "x": 692.4754605523751,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 822.3854784636882,
-            "y": 696.0,
+            "x": 805.3324972886812,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 937.8776958752021,
-            "y": 696.0,
+            "x": 918.189534024988,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1053.369913286716,
-            "y": 696.0,
+            "x": 1031.046570761294,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1169.7387301268345,
-            "y": 696.0,
+            "x": 1145.2528439143366,
+            "y": 700.8554830816831,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1286.8634136209039,
-            "y": 686.4899810243045,
+            "x": 1259.1942325358475,
+            "y": 691.4636314833633,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 605.0240980903596,
+            "x": 1340.0,
+            "y": 618.4740355929961,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 489.45427159965476,
+            "x": 1340.0,
+            "y": 505.1434230425073,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 373.962054188141,
+            "x": 1340.0,
+            "y": 392.286386306201,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1349.15463514828,
-            "y": 255.29817565046497,
+            "x": 1336.800318974406,
+            "y": 275.78325010340376,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1240.5018982934182,
-            "y": 208.90161754186633,
+            "x": 1245.4083215002088,
+            "y": 207.96420013076607,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1122.8247414385005,
-            "y": 204.0,
+            "x": 1130.0402902836706,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1006.9854994792646,
-            "y": 204.0,
+            "x": 1016.0671566592928,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 891.4932820677509,
-            "y": 204.0,
+            "x": 903.2101199229866,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 776.0010646562372,
-            "y": 204.0,
+            "x": 790.3530831866804,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 660.5088472447235,
-            "y": 204.0,
+            "x": 677.4960464503741,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 545.0166298332099,
-            "y": 204.0,
+            "x": 564.6390097140679,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 428.54945331726975,
-            "y": 204.0,
+            "x": 451.20943891965686,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 310.9728861916147,
-            "y": 216.7514100367416,
+            "x": 335.76375718367433,
+            "y": 208.74411879622775,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 238.0,
-            "y": 303.33,
+            "x": 260.0,
+            "y": 288.42999999999995,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           }
         ]
       },
-      "car2_4": {
-        "active_target_index": 13,
+      "car_5": {
+        "active_target_index": 10,
         "waypoints": [
           {
-            "x": 238.0,
-            "y": 421.8277501244022,
+            "x": 260.0,
+            "y": 404.2266076597191,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 238.0,
-            "y": 537.3199675359151,
+            "x": 260.0,
+            "y": 517.0836443960251,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 247.27855258603233,
-            "y": 656.0835427662009,
+            "x": 261.29561117139764,
+            "y": 632.995624413757,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 358.57707761551177,
-            "y": 692.8209858655971,
+            "x": 351.74491700870396,
+            "y": 696.3897246755779,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 475.8127703547919,
-            "y": 696.0,
+            "x": 466.76138707976287,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 591.4010436406606,
-            "y": 696.0,
+            "x": 579.618423816069,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 706.8932610521745,
-            "y": 696.0,
+            "x": 692.4754605523751,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 822.3854784636882,
-            "y": 696.0,
+            "x": 805.3324972886812,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 937.8776958752021,
-            "y": 696.0,
+            "x": 918.189534024988,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1053.369913286716,
-            "y": 696.0,
+            "x": 1031.046570761294,
+            "y": 701.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1169.7387301268345,
-            "y": 696.0,
+            "x": 1145.2528439143366,
+            "y": 700.8554830816831,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1286.8634136209039,
-            "y": 686.4899810243045,
+            "x": 1259.1942325358475,
+            "y": 691.4636314833633,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 605.0240980903596,
+            "x": 1340.0,
+            "y": 618.4740355929961,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 489.45427159965476,
+            "x": 1340.0,
+            "y": 505.1434230425073,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1362.0,
-            "y": 373.962054188141,
+            "x": 1340.0,
+            "y": 392.286386306201,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1349.15463514828,
-            "y": 255.29817565046497,
+            "x": 1336.800318974406,
+            "y": 275.78325010340376,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1240.5018982934182,
-            "y": 208.90161754186633,
+            "x": 1245.4083215002088,
+            "y": 207.96420013076607,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1122.8247414385005,
-            "y": 204.0,
+            "x": 1130.0402902836706,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 1006.9854994792646,
-            "y": 204.0,
+            "x": 1016.0671566592928,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 891.4932820677509,
-            "y": 204.0,
+            "x": 903.2101199229866,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 776.0010646562372,
-            "y": 204.0,
+            "x": 790.3530831866804,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 660.5088472447235,
-            "y": 204.0,
+            "x": 677.4960464503741,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 545.0166298332099,
-            "y": 204.0,
+            "x": 564.6390097140679,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 428.54945331726975,
-            "y": 204.0,
+            "x": 451.20943891965686,
+            "y": 199.0,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 310.9728861916147,
-            "y": 216.7514100367416,
+            "x": 335.76375718367433,
+            "y": 208.74411879622775,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0
           },
           {
-            "x": 238.0,
-            "y": 303.33,
+            "x": 260.0,
+            "y": 288.42999999999995,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          }
+        ]
+      },
+      "car_6": {
+        "active_target_index": 10,
+        "waypoints": [
+          {
+            "x": 260.0,
+            "y": 404.2266076597191,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 260.0,
+            "y": 517.0836443960251,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 261.29561117139764,
+            "y": 632.995624413757,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 351.74491700870396,
+            "y": 696.3897246755779,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 466.76138707976287,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 579.618423816069,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 692.4754605523751,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 805.3324972886812,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 918.189534024988,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1031.046570761294,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1145.2528439143366,
+            "y": 700.8554830816831,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1259.1942325358475,
+            "y": 691.4636314833633,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1340.0,
+            "y": 618.4740355929961,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1340.0,
+            "y": 505.1434230425073,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1340.0,
+            "y": 392.286386306201,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1336.800318974406,
+            "y": 275.78325010340376,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1245.4083215002088,
+            "y": 207.96420013076607,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1130.0402902836706,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1016.0671566592928,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 903.2101199229866,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 790.3530831866804,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 677.4960464503741,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 564.6390097140679,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 451.20943891965686,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 335.76375718367433,
+            "y": 208.74411879622775,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 260.0,
+            "y": 288.42999999999995,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          }
+        ]
+      },
+      "car_7": {
+        "active_target_index": 10,
+        "waypoints": [
+          {
+            "x": 260.0,
+            "y": 404.2266076597191,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 260.0,
+            "y": 517.0836443960251,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 261.29561117139764,
+            "y": 632.995624413757,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 351.74491700870396,
+            "y": 696.3897246755779,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 466.76138707976287,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 579.618423816069,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 692.4754605523751,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 805.3324972886812,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 918.189534024988,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1031.046570761294,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1145.2528439143366,
+            "y": 700.8554830816831,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1259.1942325358475,
+            "y": 691.4636314833633,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1340.0,
+            "y": 618.4740355929961,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1340.0,
+            "y": 505.1434230425073,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1340.0,
+            "y": 392.286386306201,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1336.800318974406,
+            "y": 275.78325010340376,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1245.4083215002088,
+            "y": 207.96420013076607,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1130.0402902836706,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1016.0671566592928,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 903.2101199229866,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 790.3530831866804,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 677.4960464503741,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 564.6390097140679,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 451.20943891965686,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 335.76375718367433,
+            "y": 208.74411879622775,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 260.0,
+            "y": 288.42999999999995,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          }
+        ]
+      },
+      "car_8": {
+        "active_target_index": 10,
+        "waypoints": [
+          {
+            "x": 260.0,
+            "y": 404.2266076597191,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 260.0,
+            "y": 517.0836443960251,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 261.29561117139764,
+            "y": 632.995624413757,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 351.74491700870396,
+            "y": 696.3897246755779,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 466.76138707976287,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 579.618423816069,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 692.4754605523751,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 805.3324972886812,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 918.189534024988,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1031.046570761294,
+            "y": 701.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1145.2528439143366,
+            "y": 700.8554830816831,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1259.1942325358475,
+            "y": 691.4636314833633,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1340.0,
+            "y": 618.4740355929961,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1340.0,
+            "y": 505.1434230425073,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1340.0,
+            "y": 392.286386306201,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1336.800318974406,
+            "y": 275.78325010340376,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1245.4083215002088,
+            "y": 207.96420013076607,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1130.0402902836706,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 1016.0671566592928,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 903.2101199229866,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 790.3530831866804,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 677.4960464503741,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 564.6390097140679,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 451.20943891965686,
+            "y": 199.0,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 335.76375718367433,
+            "y": 208.74411879622775,
+            "kind": "permanent",
+            "source": "generated",
+            "created_lap": 0
+          },
+          {
+            "x": 260.0,
+            "y": 288.42999999999995,
             "kind": "permanent",
             "source": "generated",
             "created_lap": 0

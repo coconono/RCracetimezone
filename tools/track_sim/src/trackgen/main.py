@@ -6,7 +6,7 @@ from pathlib import Path
 import pygame
 
 from src.common.config import as_int, read_simple_conf
-from src.common.geometry import validate_track
+from src.common.geometry import is_on_racing_surface, validate_track
 from src.common.io import load_track, save_track
 from src.common.track_generation import generate_track
 from src.common.ui import create_default_font, draw_dropdown_menus, draw_file_picker, draw_lines, menu_action_at
@@ -67,12 +67,29 @@ def load_latest_track(tracks_dir: Path):
     return load_track(candidates[-1])
 
 
-def generate_valid_track(width: int, height: int):
+def generate_valid_track(width: int, height: int, lane_width: float):
     for _ in range(200):
-        candidate = generate_track(seed=random.randint(1, 999999), width=width, height=height)
+        candidate = generate_track(seed=random.randint(1, 999999), width=width, height=height, lane_width=lane_width)
         if validate_track(candidate):
             return candidate
     return None
+
+
+def _grid_samples(grid: tuple[float, float, float, float]) -> list[tuple[float, float]]:
+    gx, gy, gw, gh = grid
+    inset_x = max(1.0, min(3.0, gw * 0.08))
+    inset_y = max(1.0, min(3.0, gh * 0.08))
+    return [
+        (gx + inset_x, gy + inset_y),
+        (gx + gw - inset_x, gy + inset_y),
+        (gx + inset_x, gy + gh - inset_y),
+        (gx + gw - inset_x, gy + gh - inset_y),
+        (gx + gw * 0.5, gy + gh * 0.5),
+    ]
+
+
+def _grid_on_surface(track, grid: tuple[float, float, float, float]) -> bool:
+    return all(is_on_racing_surface(sample, track) for sample in _grid_samples(grid))
 
 
 def main() -> int:
@@ -83,11 +100,13 @@ def main() -> int:
             "window_width": "1600",
             "window_height": "900",
             "tracks_dir": "tracks",
+            "lane_width": "90",
         },
     )
 
     width = as_int(conf, "window_width", 1600)
     height = as_int(conf, "window_height", 900)
+    lane_width = float(as_int(conf, "lane_width", 90))
     tracks_dir = project_dir / conf.get("tracks_dir", "tracks")
     tracks_dir.mkdir(parents=True, exist_ok=True)
 
@@ -97,7 +116,7 @@ def main() -> int:
     clock = pygame.time.Clock()
     font = create_default_font(22)
 
-    track = generate_valid_track(width, height)
+    track = generate_valid_track(width, height, lane_width)
     message = "G generate, R reset, N rename, S save, L load latest, D discard, Q quit"
     name_edit = False
     name_buffer = track.name if track else "new_track"
@@ -107,6 +126,8 @@ def main() -> int:
     load_picker_open = False
     load_picker_files: list[Path] = []
     load_picker_rows: list[tuple[int, pygame.Rect]] = []
+    dragging_start_grid = False
+    start_grid_drag_offset = (0.0, 0.0)
 
     menus = [
         ("Start", ["Load", "Save", "Quit"]),
@@ -134,6 +155,14 @@ def main() -> int:
                     load_picker_open = False
                     continue
 
+                if track is not None:
+                    start_grid_rect = pygame.Rect(track.start_grid)
+                    if start_grid_rect.collidepoint(event.pos):
+                        dragging_start_grid = True
+                        start_grid_drag_offset = (start_grid_rect.x - event.pos[0], start_grid_rect.y - event.pos[1])
+                        message = "Dragging start grid."
+                        continue
+
                 action = menu_action_at(event.pos, header_rects, item_rects)
                 if action is None:
                     open_menu = None
@@ -156,7 +185,7 @@ def main() -> int:
                             save_track(path, track)
                             message = f"Saved {path.name}."
                     elif action.menu == "Generate" and action.item == "Generate":
-                        track = generate_valid_track(width, height)
+                        track = generate_valid_track(width, height, lane_width)
                         if track is None:
                             message = "Failed to generate a valid track after many attempts."
                         else:
@@ -166,7 +195,7 @@ def main() -> int:
                         track = None
                         message = "Track reset."
                     elif action.menu == "Validate" and action.item == "Discard":
-                        track = generate_valid_track(width, height)
+                        track = generate_valid_track(width, height, lane_width)
                         if track:
                             name_buffer = track.name
                             message = "Discarded old track and generated a new one."
@@ -185,6 +214,19 @@ def main() -> int:
                             message = f"Saved {path.name}."
                     elif action.menu == "Validate" and action.item == "Quit":
                         running = False
+            elif event.type == pygame.MOUSEMOTION:
+                if dragging_start_grid and track is not None:
+                    gx, gy, gw, gh = track.start_grid
+                    new_x = float(event.pos[0] + start_grid_drag_offset[0])
+                    new_y = float(event.pos[1] + start_grid_drag_offset[1])
+                    candidate = (new_x, new_y, gw, gh)
+                    if _grid_on_surface(track, candidate):
+                        track.start_grid = candidate
+            elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:
+                if dragging_start_grid:
+                    dragging_start_grid = False
+                    if track is not None:
+                        message = "Start grid moved."
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     load_picker_open = False
@@ -206,7 +248,7 @@ def main() -> int:
                 if event.key == pygame.K_q:
                     running = False
                 elif event.key == pygame.K_g:
-                    track = generate_valid_track(width, height)
+                    track = generate_valid_track(width, height, lane_width)
                     if track is None:
                         message = "Failed to generate a valid track after many attempts."
                     else:
@@ -216,7 +258,7 @@ def main() -> int:
                     track = None
                     message = "Track reset."
                 elif event.key == pygame.K_d:
-                    track = generate_valid_track(width, height)
+                    track = generate_valid_track(width, height, lane_width)
                     if track:
                         name_buffer = track.name
                         message = "Discarded old track and generated a new one."
@@ -246,7 +288,7 @@ def main() -> int:
                 f"Track: {track.name}",
                 f"Outer pieces: {len(track.outer_pieces)}",
                 f"Inner pieces: {len(track.inner_pieces)}",
-                "Start grid shown in yellow",
+                "Drag yellow start grid to reposition on track",
             ]
             draw_lines(screen, font, info, 24, 56, (245, 245, 245))
         else:

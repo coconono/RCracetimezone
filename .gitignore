@@ -20,3 +20,6 @@ env/
 build/
 dist/
 *.egg-info/
+
+# Track simulator runtime logs
+tools/track_sim/logs/*.log
